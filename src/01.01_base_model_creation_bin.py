@@ -6,7 +6,7 @@ import logging
 from src.utils.common import read_yaml, create_directories
 import tensorflow as tf
 import io
-
+import time 
 STAGE = "creating binary model from scratch" ## <<< change stage name 
 
 logging.basicConfig(
@@ -71,12 +71,14 @@ def main(config_path):
     logging.info(f"bin_scratch_model summary: \n{_log_model_summary(model)}")
 
     ## Train the model
+    Start = time.time()
     history = model.fit(
         X_train, y_train_bin, 
         epochs=10, 
         validation_data=(X_valid, y_valid_bin),
         verbose=2)
-
+    Stop =time.time()
+    print(f"Training time: {Stop-Start}s")
     ## save the base model - 
     model_dir_path = os.path.join("artifacts","models")
     create_directories([model_dir_path])

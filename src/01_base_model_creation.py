@@ -6,7 +6,7 @@ import logging
 from src.utils.common import read_yaml, create_directories
 import tensorflow as tf
 import io
-
+import time
 STAGE = "creating base model" ## <<< change stage name 
 
 logging.basicConfig(
@@ -52,7 +52,7 @@ def main(config_path):
     METRICS = ["accuracy"]
 
     model.compile(loss=LOSS, optimizer=OPTIMIZER, metrics=METRICS) 
-
+    model.summary()
     ## log our model summary information in logs
     def _log_model_summary(model):
         with io.StringIO() as stream:
@@ -64,12 +64,14 @@ def main(config_path):
     logging.info(f"base model summary: \n{_log_model_summary(model)}")
 
     ## Train the model
+    Start = time.time()
     history = model.fit(
         X_train, y_train, 
         epochs=10, 
         validation_data=(X_valid, y_valid),
         verbose=2)
-
+    Stop = time.time()
+    print(f"Training time{Stop-Start}s")
     ## save the base model - 
     model_dir_path = os.path.join("artifacts","models")
     create_directories([model_dir_path])

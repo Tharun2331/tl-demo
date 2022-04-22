@@ -117,3 +117,466 @@ _________________________________________________________________
 [2021-11-20 19:32:08,831: INFO: 01.01_base_model_creation_bin]: evaluation metrics [nan, 0.004699999932199717]
 [2021-11-20 19:32:08,884: INFO: 01.01_base_model_creation_bin]: >>>>> stage creating binary model from scratch completed!<<<<<
 
+[2022-04-22 12:35:49,312: INFO: 01_base_model_creation]: 
+********************
+[2022-04-22 12:35:49,313: INFO: 01_base_model_creation]: >>>>> stage creating base model started <<<<<
+[2022-04-22 12:35:49,315: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-22 12:35:53,106: INFO: 01_base_model_creation]: base model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputlayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-04-22 12:37:13,206: INFO: common]: created directory at: artifacts\models
+[2022-04-22 12:37:13,333: INFO: 01_base_model_creation]: base model is saved at artifacts\models\base_model.h5
+[2022-04-22 12:37:14,621: INFO: 01_base_model_creation]: evaluation metrics [0.3162641227245331, 0.9092000126838684]
+[2022-04-22 12:37:14,727: INFO: 01_base_model_creation]: >>>>> stage creating base model completed!<<<<<
+
+[2022-04-22 12:42:39,923: INFO: 01_base_model_creation]: 
+********************
+[2022-04-22 12:42:39,924: INFO: 01_base_model_creation]: >>>>> stage creating base model started <<<<<
+[2022-04-22 12:42:39,925: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-22 12:42:40,903: INFO: 01_base_model_creation]: base model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputlayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-04-22 12:43:57,842: INFO: common]: created directory at: artifacts\models
+[2022-04-22 12:43:58,221: INFO: 01_base_model_creation]: base model is saved at artifacts\models\base_model.h5
+[2022-04-22 12:43:59,402: INFO: 01_base_model_creation]: evaluation metrics [0.3162641227245331, 0.9092000126838684]
+[2022-04-22 12:43:59,491: INFO: 01_base_model_creation]: >>>>> stage creating base model completed!<<<<<
+
+[2022-04-22 14:22:43,383: INFO: 02_transfer_learning_even_odd]: 
+********************
+[2022-04-22 14:22:43,385: INFO: 02_transfer_learning_even_odd]: >>>>> stage transfer learning started <<<<<
+[2022-04-22 14:22:43,387: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-22 14:22:44,620: INFO: 02_transfer_learning_even_odd]: loaded base model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputlayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-04-22 14:22:46,430: INFO: 02_transfer_learning_even_odd]: base model evaluation metrics [0.3162641227245331, 0.9092000126838684]
+[2022-04-22 14:22:46,507: INFO: 02_transfer_learning_even_odd]: transfer learning model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ output_layer (Dense)        (None, 2)                 202       
+                                                                 
+=================================================================
+Total params: 265,802
+Trainable params: 202
+Non-trainable params: 265,600
+_________________________________________________________________
+
+[2022-04-22 14:23:47,399: INFO: 02_transfer_learning_even_odd]: base model is saved at artifacts\models\even_odd_model.h5
+[2022-04-22 14:23:48,598: INFO: 02_transfer_learning_even_odd]: evaluation metrics [0.29125913977622986, 0.8797000050544739]
+[2022-04-22 14:23:48,658: INFO: 02_transfer_learning_even_odd]: >>>>> stage transfer learning completed!<<<<<
+
+[2022-04-22 14:43:22,212: INFO: 03_transfer_learning_5_less_than_5]: 
+********************
+[2022-04-22 14:43:22,212: INFO: 03_transfer_learning_5_less_than_5]: >>>>> stage transfer learning started <<<<<
+[2022-04-22 14:43:22,213: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-22 14:43:23,286: INFO: 03_transfer_learning_5_less_than_5]: loaded base model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputlayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-04-22 14:43:23,373: INFO: 03_transfer_learning_5_less_than_5]: transfer learning model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ output_layer (Dense)        (None, 2)                 202       
+                                                                 
+=================================================================
+Total params: 265,802
+Trainable params: 202
+Non-trainable params: 265,600
+_________________________________________________________________
+
+[2022-04-22 14:44:24,864: INFO: 03_transfer_learning_5_less_than_5]: base model is saved at artifacts\models\even_odd_model.h5
+[2022-04-22 14:44:26,133: INFO: 03_transfer_learning_5_less_than_5]: evaluation metrics [0.3233988881111145, 0.8700000047683716]
+[2022-04-22 14:44:26,225: INFO: 03_transfer_learning_5_less_than_5]: >>>>> stage transfer learning completed!<<<<<
+
+[2022-04-22 14:44:38,077: INFO: 03_transfer_learning_5_less_than_5]: 
+********************
+[2022-04-22 14:44:38,078: INFO: 03_transfer_learning_5_less_than_5]: >>>>> stage transfer learning started <<<<<
+[2022-04-22 14:44:38,079: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-22 14:44:39,079: INFO: 03_transfer_learning_5_less_than_5]: loaded base model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputlayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-04-22 14:44:39,189: INFO: 03_transfer_learning_5_less_than_5]: transfer learning model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ output_layer (Dense)        (None, 2)                 202       
+                                                                 
+=================================================================
+Total params: 265,802
+Trainable params: 202
+Non-trainable params: 265,600
+_________________________________________________________________
+
+[2022-04-22 14:45:42,495: INFO: 03_transfer_learning_5_less_than_5]: base model is saved at artifacts\models\even_odd_model.h5
+[2022-04-22 14:45:43,893: INFO: 03_transfer_learning_5_less_than_5]: evaluation metrics [0.3233988881111145, 0.8700000047683716]
+[2022-04-22 14:45:43,974: INFO: 03_transfer_learning_5_less_than_5]: >>>>> stage transfer learning completed!<<<<<
+
+[2022-04-22 14:46:19,041: INFO: 03_transfer_learning_5_less_than_5]: 
+********************
+[2022-04-22 14:46:19,041: INFO: 03_transfer_learning_5_less_than_5]: >>>>> stage transfer learning started <<<<<
+[2022-04-22 14:46:19,043: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-22 14:46:20,024: INFO: 03_transfer_learning_5_less_than_5]: loaded base model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputlayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-04-22 14:46:20,128: INFO: 03_transfer_learning_5_less_than_5]: transfer learning model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ output_layer (Dense)        (None, 2)                 202       
+                                                                 
+=================================================================
+Total params: 265,802
+Trainable params: 202
+Non-trainable params: 265,600
+_________________________________________________________________
+
+[2022-04-22 14:47:28,169: INFO: 03_transfer_learning_5_less_than_5]: base model is saved at artifacts\models\even_odd_model.h5
+[2022-04-22 14:47:29,580: INFO: 03_transfer_learning_5_less_than_5]: evaluation metrics [0.3233988881111145, 0.8700000047683716]
+[2022-04-22 14:47:29,649: INFO: 03_transfer_learning_5_less_than_5]: >>>>> stage transfer learning completed!<<<<<
+
+[2022-04-22 14:56:49,909: INFO: 01.01_base_model_creation_bin]: 
+********************
+[2022-04-22 14:56:49,911: INFO: 01.01_base_model_creation_bin]: >>>>> stage creating binary model from scratch started <<<<<
+[2022-04-22 14:56:49,913: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-22 14:56:51,018: INFO: 01.01_base_model_creation_bin]: bin_scratch_model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputlayer (Dense)         (None, 2)                 202       
+                                                                 
+=================================================================
+Total params: 265,802
+Trainable params: 265,802
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-04-22 14:58:07,917: INFO: common]: created directory at: artifacts\models
+[2022-04-22 14:58:08,057: INFO: 01.01_base_model_creation_bin]: bin_scratch_model is saved at artifacts\models\bin_scratch_model.h5
+[2022-04-22 14:58:09,225: INFO: 01.01_base_model_creation_bin]: evaluation metrics [0.1661205142736435, 0.9419000148773193]
+[2022-04-22 14:58:09,308: INFO: 01.01_base_model_creation_bin]: >>>>> stage creating binary model from scratch completed!<<<<<
+
+[2022-04-22 15:02:15,275: INFO: 03_transfer_learning_5_less_than_5]: 
+********************
+[2022-04-22 15:02:15,275: INFO: 03_transfer_learning_5_less_than_5]: >>>>> stage transfer learning started <<<<<
+[2022-04-22 15:02:15,277: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-22 15:02:16,237: INFO: 03_transfer_learning_5_less_than_5]: loaded base model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputlayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-04-22 15:02:16,301: INFO: 03_transfer_learning_5_less_than_5]: transfer learning model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ output_layer (Dense)        (None, 2)                 202       
+                                                                 
+=================================================================
+Total params: 265,802
+Trainable params: 202
+Non-trainable params: 265,600
+_________________________________________________________________
+
+[2022-04-22 15:03:11,452: INFO: 03_transfer_learning_5_less_than_5]: base model is saved at artifacts\models\even_odd_model.h5
+[2022-04-22 15:03:12,712: INFO: 03_transfer_learning_5_less_than_5]: evaluation metrics [0.3233988881111145, 0.8700000047683716]
+[2022-04-22 15:03:12,802: INFO: 03_transfer_learning_5_less_than_5]: >>>>> stage transfer learning completed!<<<<<
+
+[2022-04-22 15:04:27,562: INFO: 01.01_base_model_creation_bin]: 
+********************
+[2022-04-22 15:04:27,562: INFO: 01.01_base_model_creation_bin]: >>>>> stage creating binary model from scratch started <<<<<
+[2022-04-22 15:04:27,564: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-22 15:04:28,488: INFO: 01.01_base_model_creation_bin]: bin_scratch_model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputlayer (Dense)         (None, 2)                 202       
+                                                                 
+=================================================================
+Total params: 265,802
+Trainable params: 265,802
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-04-22 15:05:45,153: INFO: common]: created directory at: artifacts\models
+[2022-04-22 15:05:45,209: INFO: 01.01_base_model_creation_bin]: bin_scratch_model is saved at artifacts\models\bin_scratch_model.h5
+[2022-04-22 15:05:46,461: INFO: 01.01_base_model_creation_bin]: evaluation metrics [0.1661205142736435, 0.9419000148773193]
+[2022-04-22 15:05:46,545: INFO: 01.01_base_model_creation_bin]: >>>>> stage creating binary model from scratch completed!<<<<<
+
+[2022-04-22 16:54:44,842: INFO: 01_base_model_creation]: 
+********************
+[2022-04-22 16:54:44,843: INFO: 01_base_model_creation]: >>>>> stage creating base model started <<<<<
+[2022-04-22 16:54:44,845: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-22 16:54:45,974: INFO: 01_base_model_creation]: base model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputlayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-04-22 16:56:03,390: INFO: common]: created directory at: artifacts\models
+[2022-04-22 16:56:03,535: INFO: 01_base_model_creation]: base model is saved at artifacts\models\base_model.h5
+[2022-04-22 16:56:04,749: INFO: 01_base_model_creation]: evaluation metrics [0.3162641227245331, 0.9092000126838684]
+[2022-04-22 16:56:04,807: INFO: 01_base_model_creation]: >>>>> stage creating base model completed!<<<<<
+
+[2022-04-22 17:01:49,246: INFO: 01_base_model_creation]: 
+********************
+[2022-04-22 17:01:49,247: INFO: 01_base_model_creation]: >>>>> stage creating base model started <<<<<
+[2022-04-22 17:01:49,248: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-04-22 17:01:50,192: INFO: 01_base_model_creation]: base model summary: 
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ inputlayer (Flatten)        (None, 784)               0         
+                                                                 
+ hiddenlayer1 (Dense)        (None, 300)               235500    
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 300)               0         
+                                                                 
+ hiddenlayer2 (Dense)        (None, 100)               30100     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 100)               0         
+                                                                 
+ outputlayer (Dense)         (None, 10)                1010      
+                                                                 
+=================================================================
+Total params: 266,610
+Trainable params: 266,610
+Non-trainable params: 0
+_________________________________________________________________
+
+[2022-04-22 17:03:06,839: INFO: common]: created directory at: artifacts\models
+[2022-04-22 17:03:06,898: INFO: 01_base_model_creation]: base model is saved at artifacts\models\base_model.h5
+[2022-04-22 17:03:08,093: INFO: 01_base_model_creation]: evaluation metrics [0.3162641227245331, 0.9092000126838684]
+[2022-04-22 17:03:08,135: INFO: 01_base_model_creation]: >>>>> stage creating base model completed!<<<<<
+
